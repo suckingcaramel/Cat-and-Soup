@@ -142,6 +142,17 @@ html, body {
   background: #4f5547;
   color: #f8f2db;
   overflow: hidden;
+  min-height: 300px;
+}
+
+.explore-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
 }
 
 
@@ -152,6 +163,7 @@ html, body {
   object-fit: cover;
   opacity: 0.6;
   z-index: -1;
+  object-fit: contain;
 }
 
 .explore-content {
