@@ -127,20 +127,20 @@ html, body {
   margin-right: 8px;
 }
 
-/* Адаптивность */
+/* АДАПТИВНОСТЬ */
 @media (max-width: 768px) {
   .hero {
     height: auto;
-    padding: 40px 0;
+    padding: 40px 20px;
+  }
+
+  .hero-title {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
   }
 
   .purchase-btn {
     font-size: 12px;
     padding: 8px 12px;
-  }
-
-  .hero-title {
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
   }
 }
 
