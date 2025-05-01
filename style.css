@@ -97,7 +97,7 @@ html, body {
 }
 
 .purchase-buttons {
-  position: absolute;
+  position: relative;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -114,16 +114,23 @@ html, body {
 }
 
 .purchase-btn {
+  display: flex;
+  flex: 1 1 200px; /* гибкая ширина */
+  max-width: 250px;
+  min-width: 150px;
+  white-space: normal; /* текст переносится */
+  font-size: 13px;
+  padding: 10px;
+  
   background-color: #7ca849;
   color: #fff;
-  padding: 8px 12px;
-  font-size: 12px;
+  
   border-radius: 5px;
   text-decoration: none;
-  display: flex;
+  
+  
   align-items: center;
   transition: 0.2s;
-  max-width: 240px;
   width: 100%;
   justify-content: center;
 }
