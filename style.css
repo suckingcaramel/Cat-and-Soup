@@ -109,6 +109,10 @@ html, body {
   overflow-x: auto;
 }
 
+.purchase-buttons::-webkit-scrollbar {
+  display: none;
+}
+
 .purchase-btn {
   background-color: #7ca849;
   color: #fff;
@@ -124,6 +128,7 @@ html, body {
   justify-content: center;
 }
 
+
 .purchase-btn img {
   width: 18px;
   height: 18px;
@@ -132,10 +137,13 @@ html, body {
 
 /* EXPLORE */
 .explore-section {
+  position: relative;
   padding: 40px 20px;
   background: #4f5547;
   color: #f8f2db;
+  overflow: hidden;
 }
+
 
 .explore-background img {
   position: absolute;
