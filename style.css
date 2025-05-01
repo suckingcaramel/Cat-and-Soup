@@ -332,7 +332,7 @@ html, body {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
   .header-nav-left,
   .header-nav-right {
     position: static;
