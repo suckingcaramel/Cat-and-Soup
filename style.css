@@ -360,3 +360,46 @@ html, body {
 
 }
 
+
+/* --- Адаптация изображений для экранов телефонов --- */
+@media (max-width: 768px) {
+  /* Все <img> внутри контента: не обрезаем, а масштабируем */
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* вместо cover */
+  }
+
+  /* Герой-блок: фон-изображение теперь тоже масштабируется целиком */
+  .hero-background img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Блок с большим текстом (explore): фон не обрезается */
+  .explore-background img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+  }
+
+  /* Картинки в карточках info-block */
+  .info-block img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  /* Логотипы партнёров */
+  .logo-panel__img {
+    max-width: 100px;
+    height: auto;
+  }
+
+  /* Кнопки загрузки: иконки тоже адаптивны */
+  .purchase-btn img {
+    width: 24px;
+    height: auto;
+  }
+}
