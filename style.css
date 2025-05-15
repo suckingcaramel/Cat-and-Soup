@@ -1,0 +1,504 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&family=Playpen+Sans+Deva&family=PT+Sans&family=Caveat&family=LXGW+WenKai+TC&display=swap");
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base typography and layout */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-size: clamp(0.875rem, 1.2vw, 1.25rem);
+}
+
+body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Language-specific font families */
+html[lang="en"] body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+html[lang="ru"] body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* Buttons keep system sans */
+.header-nav a,
+.lang-btn,
+.purchase-btn span {
+  font-family: system-ui, sans-serif !important;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(49,63,37,0.8);
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: #f8f2db;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: clamp(10px,1.2vw,14px);
+  padding: clamp(6px,0.8vw,8px) clamp(10px,1.5vw,16px);
+  border-radius: clamp(3px,0.5vw,4px);
+  transition: font-size 0.2s ease,padding 0.2s ease,border-radius 0.2s ease,background 0.3s ease,color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #000;
+  background: #da9648;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  padding: clamp(4px,0.8vw,8px) clamp(8px,1.5vw,16px);
+  border: 1px solid #fff;
+  border-radius: clamp(3px,0.5vw,4px);
+  background: transparent;
+  color: #fff;
+  font-weight: bold;
+  font-size: clamp(12px,1.2vw,16px);
+  cursor: pointer;
+  transition: font-size 0.2s ease,padding 0.2s ease,border-radius 0.2s ease,background-color 0.3s ease,color 0.3s ease;
+}
+
+.lang-btn.active {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Logo */
+.header-logo img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hero-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  top: -150px;
+}
+
+.hero-overlay h1 {
+  font-size: 5rem;
+}
+
+/* Logo font per language */
+html[lang="en"] .hero-overlay h1 {
+  font-family: 'Playpen Sans Deva', cursive;
+}
+
+html[lang="ru"] .hero-overlay h1 {
+  font-family: 'Playpen Sans Deva', cursive;
+}
+
+
+
+/* Purchase buttons */
+.purchase-buttons {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  z-index: 2;
+  padding: 10px;
+}
+
+.purchase-btn {
+  background-color: #7ca849;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  white-space: nowrap;
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.purchase-btn:hover {
+  transform: scale(1.05);
+}
+
+.purchase-btn img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  object-fit: contain;
+}
+
+/* Explore section */
+.explore-section {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+  color: #f8f2db;
+  padding-top: 80px;
+  padding: 60px 20px;
+}
+
+.explore-background img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+  opacity: 0.9;
+}
+
+.explore-content {
+  background-color: rgba(0,0,0,0.6);
+  max-width: 900px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  position: relative;
+  top: -40px;
+}
+
+.explore-content h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+.explore-content p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  color: #ccc;
+}
+
+/* Video section */
+.video-section {
+  background-color: #121528;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.video-container {
+  width: 90%;
+  max-width: 900px;
+  aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* Testimonials */
+.testimonials-section {
+  background: #121528;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.testimonials-wrapper {
+  max-width: 900px;
+  margin: 0 auto 40px;
+}
+
+.testimonial {
+  margin-bottom: 40px;
+}
+
+.testimonial blockquote {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.testimonial cite {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+/* Awards */
+.awards {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 4rem 0;
+  overflow: visible;
+}
+
+.icons-container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.awards .kitty {
+  position: relative;
+  z-index: 1;
+  width: 6rem;
+  transition: transform 0.4s ease;
+  transform-origin: center;
+  cursor: pointer;
+}
+
+.awards .kitty1:hover { transform: rotate(-15deg) scale(1.1); }
+.awards .kitty2:hover { transform: rotate(20deg) scale(1.1); }
+.awards .kitty3:hover { transform: rotate(20deg) scale(1.1); }
+.awards .kitty4:hover { transform: rotate(15deg) scale(1.1); }
+
+.icons-container .icon {
+  position: absolute;
+  opacity: 0;
+  transform-origin: center center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  max-width: 3rem;
+}
+
+.awards:hover .icon {
+  opacity: 1;
+}
+
+/* Content cards */
+.content {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  padding: 40px 20px;
+  justify-items: center;
+  background-color: #4f5547;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  flex: 0 0 calc((100% - 3*20px)/4);
+  max-width: 380px;
+  aspect-ratio: 9/15.5;
+  max-height: 90vh;
+  border-radius: 1.75rem;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 0 2px rgba(255,214,102,0.4),0 0 25px 8px rgba(255,214,102,0.15);
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.23,1,0.32,1),box-shadow 0.4s ease-out,background-size 1.5s ease-out;
+  cursor: pointer;
+  will-change: transform,box-shadow,background-size;
+}
+
+.card-container:hover {
+  box-shadow: 0 0 0 3px rgba(255,214,102,0.6),0 0 35px 12px rgba(255,214,102,0.25);
+}
+
+.inner-border-overlay {
+  position: absolute;
+  inset: 14px;
+  border-radius: 1.375rem;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: inset 0.5px 0.5px 1.5px rgba(255,235,180,0.6),inset -1px -1px 1px rgba(160,110,0.5),inset 3px 3px 6px rgba(0,0,0,0.25);
+  transform: translateZ(30px);
+  border: 1px solid rgba(255,214,102,0.1);
+}
+
+.content-area {
+  position: absolute;
+  inset: 14px;
+  border-radius: 1.375rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 5;
+  transform: translateZ(60px);
+}
+
+.gradient-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 75%;
+  background: linear-gradient(to top,rgba(10,10,10,0.9) 0%,rgba(10,10,10,0.65) 50%,transparent 100%);
+  pointer-events: none;
+  z-index: 15;
+  transform: translateZ(5px);
+}
+
+.text-block {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  transform: translateZ(25px);
+}
+
+.text-block h3,
+.text-block p {
+  color: #f8fafc;
+}
+
+/* Card fonts per language */
+html[lang="en"] .text-block h3,
+html[lang="en"] .text-block p {
+  font-family: 'Pangolin', cursive;
+}
+
+html[lang="ru"] .text-block h3,
+html[lang="ru"] .text-block p {
+  font-family: 'LXGW WenKai TC', sans-serif;
+}
+
+/* Text sizes */
+.text-block h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+.text-block p { color: #cbd5e1; }
+
+h1 { font-size: 4rem; }
+.header-nav a { font-size: 1rem; }
+p { font-size: 1rem; }
+.testimonial blockquote { font-size: 1.25rem; }
+
+/* Logo panel */
+.logo-panel {
+  width: 100%;
+  background-color: #8b5e34;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-panel__inner {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.logo-panel__img {
+  max-height: 60px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.logo-panel__img:hover {
+  transform: scale(1.1);
+}
+
+
+/* Tilt effect container */
+[data-tilt] { will-change: transform; }
+
+/* Responsive */
+@media (max-width: 640px) {
+  .card-container { flex: 0 0 100%; max-width: 100%; }
+  .content { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 710px) {
+  .explore-content { padding: 20px 15px; }
+  .explore-content h2 { font-size: 1.6rem; line-height: 1.3; }
+  .explore-content p { font-size: 0.95rem; line-height: 1.5; }
+}
+
+@media (max-width: 1200px) {
+  .content { display: flex; flex-direction: column; align-items: center; }
+  .logo-panel__inner { gap: 20px; }
+  .logo-panel__img { max-height: 50px; }
+}
+
+@media (min-width: 810px) {
+  .lang-btn { font-size: 1rem; padding: 6px 12px; border-radius: 4px; }
+  .header-nav a { font-size: 1rem; padding: 8px 12px; border-radius: 4px; }
+}
+
+@media (max-width: 610px) {
+  .header-nav a { font-size: clamp(8px,1.5vw,12px); padding: clamp(4px,1vw,6px) clamp(6px,1.5vw,12px); }
+  .lang-btn { font-size: clamp(10px,1.2vw,14px); padding: clamp(3px,0.8vw,6px) clamp(6px,1.2vw,12px); }
+}
+
+@media (max-width: 450px) {
+  .header-nav a { font-size: clamp(6px,2vw,10px); padding: clamp(2px,1vw,4px) clamp(4px,2vw,8px); }
+  .lang-btn { font-size: clamp(8px,1.5vw,12px); padding: clamp(2px,0.8vw,4px) clamp(4px,1.5vw,8px); }
+}
+
+@media (max-width: 320px) {
+  .header-nav a { font-size: clamp(5px,3vw,8px); padding: clamp(1px,1vw,3px) clamp(3px,2vw,6px); }
+  .lang-btn { font-size: clamp(6px,2vw,10px); padding: clamp(1px,0.8vw,3px) clamp(3px,1.5vw,6px); }
+}
