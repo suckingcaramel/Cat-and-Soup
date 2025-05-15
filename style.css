@@ -226,13 +226,13 @@ html[lang="ru"] .hero-overlay h1 {
 }
 
 .explore-content h2 {
-  font-size: 2.8rem;
+  font-size: clamp(1.6rem, 6vw, 2.8rem);
   line-height: 1.2;
   margin-bottom: 0.5em;
 }
 
 .explore-content p {
-  font-size: 1.15rem;
+  font-size: clamp(0.9rem, 4vw, 1.15rem);
   line-height: 1.5;
   color: #ccc;
 }
